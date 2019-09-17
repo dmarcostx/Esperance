@@ -1,2 +1,5 @@
+#Aparentemente nao esta funcionando. 
+#deveria ignorar arquivos que nao sao html e css
+
 !*.html
 !*.css
