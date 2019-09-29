@@ -27,15 +27,23 @@
     <body>
         <div class="container-fluid">
             <!-- Primeira Linha -->
-            <div class="row" id="header">
+            <div id="header" class="row text-white">
                 <div class="col-3" >
                     <img class="img-fluid" src="logo.webp">
                 </div>
                 <div class= "col-6">
-                    <input class="form-control text-white" type="text" id="search" placeholder="Busca">
-                    <button class= "btn" id = "B1" > Ok </button>
+                    <div class="input-group verticalCenter">
+                        <input class="form-control" type="text" id="searchInput" placeholder="Buscar produto">
+                        <div class="input-group-append">
+                            <button class= "btn btn-outline-light" id = "B1" ><img class="img-fluid" src="search.webp"></button>
+                        </div>
+                    </div>
                 </div>
-                <div class= col-3 > Cadastro aqui </div>
+                <div class= "col-3">
+                    <div class="verticalCenter horizontalCenter">
+                        <button type="button" class="btn btn-outline-light">Criar sua conta</button>
+                    </div>
+                </div>
             </div>
             <!-- Segunda linha -->
 

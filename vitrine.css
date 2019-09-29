@@ -1,6 +1,18 @@
+.horizontalCenter {
+    text-align:center;
+}
+.verticalCenter {
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    width: inherit;
+}
 #header {
     background-color:#f37903;
 }
-#search {
+#searchInput {
     background-color:inherit;
+}
+#searchInput::placeholder {
+    color:#ffffff;
 }
