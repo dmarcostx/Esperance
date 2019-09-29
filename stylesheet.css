@@ -10,8 +10,14 @@
 #header {
     background-color:#f37903;
 }
+#header .btn:hover .img-fluid {
+    filter: invert(90%);
+}
 #searchInput {
     background-color:inherit;
+}
+#searchInput {
+    color:#ffffff;
 }
 #searchInput::placeholder {
     color:#ffffff;
