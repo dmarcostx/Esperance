@@ -114,3 +114,33 @@
 #cadastro {
     margin-left: 50px;
 }
+
+
+.footer {
+    margin-top: 50px;
+    background-color: #000;
+    color: #fff;
+   
+
+}
+
+.footer h1{
+    font-size: 15px;
+    margin: 25px 0; 
+
+}
+
+.footer p{
+    font-size: 12px;
+}
+
+.Content-Security-Policy {
+    padding: 10px;
+    font-size: 15px;
+   
+}
+
+.footer-image img{
+    width: 15px;
+}
+
