@@ -21,18 +21,28 @@
     background-color:#f37903;
     height: 150px;
 }
+
 #header .btn:hover .img-fluid {
     filter: invert(90%);
 }
+
+#header #logo {
+    width: inherit;
+    padding: 20px;
+}
+
 #searchInput {
     background-color:inherit;
 }
+
 #searchInput {
     color:#ffffff;
 }
+
 #searchInput::placeholder {
     color:#ffffff;
 }
+
 @media screen and (max-width: 600px) {
     .hide-sm {
         display: none;
