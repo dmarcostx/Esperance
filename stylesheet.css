@@ -7,6 +7,12 @@
     top: 50%;
     width: inherit;
 }
+
+#bloco {
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
 #header {
     background-color:#f37903;
     height: 150px;
