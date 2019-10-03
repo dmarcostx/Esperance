@@ -1,6 +1,7 @@
 .horizontalCenter {
     text-align:center;
 }
+
 .verticalCenter {
     transform: translateY(-50%);
     position: absolute;
@@ -15,6 +16,13 @@
 .products {
     padding-top: 10px;
     padding-bottom: 15px;
+}
+
+.col-3 .card .card-body .buy {
+    background-color: green;
+}
+.col-3 .card .card-body .btn-success {
+    margin: 10px;
 }
 
 #header {
