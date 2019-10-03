@@ -8,7 +8,11 @@
     width: inherit;
 }
 
-#bloco {
+.dropdown-item-text {
+    background-color: #f8f9fa;
+}
+
+.products {
     padding-top: 10px;
     padding-bottom: 15px;
 }
