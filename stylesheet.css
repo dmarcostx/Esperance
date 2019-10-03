@@ -13,7 +13,7 @@
     background-color: #f8f9fa;
 }
 
-.products {
+.title {
     padding-top: 10px;
     padding-bottom: 15px;
 }
@@ -49,6 +49,10 @@
 
 #searchInput::placeholder {
     color:#ffffff;
+}
+
+#resetPasswordField {
+    margin: 100px;
 }
 
 @media screen and (max-width: 600px) {
