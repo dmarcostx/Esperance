@@ -1,5 +1,6 @@
 <!doctype html>
-<html>
+<html lang=”pt-br”>
+
 
 <head>
     <!-- Required meta tags -->
@@ -9,190 +10,183 @@
     <meta name="description" content="Pagina de compras para o trabalho 1 de PW">
     <meta name="keywords" content="html, css, php, asp.net, js, jquery">
     <meta name="Author" content="Thales V C RA ? | Marcos Vinícius Lourenço Teixeira RA 2040481813002 | ?? ">
-
-    <!-- Security metas -->
-    <meta http-equiv="Content-Security-Policy"
-        content="connect-src 'none'; font-src 'none'; frame-src 'none'; img-src 'none'; manifest-src 'none'; media-src 'none'; object-src 'none'; script-src https://code.jquery.com/jquery-3.3.1.slim.min.js https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js; style-src https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css; base-uri 'none'; form-action 'none'; block-all-mixed-content; upgrade-insecure-requests;">
-    <meta http-equiv="x-dns-prefetch-control" content="off">
-    <meta name="DownloadOptions" content="noopen">
-    <meta name="referrer" content="no-referrer">
-
+    <!--
+  <!-- Security metas
+  <meta http-equiv="Content-Security-Policy"
+  content="connect-src 'none'; font-src 'none'; frame-src 'none'; img-src 'none'; manifest-src 'none'; media-src 'none'; object-src 'none'; script-src https://code.jquery.com/jquery-3.3.1.slim.min.js https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js; style-src https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css; base-uri 'none'; form-action 'none'; block-all-mixed-content; upgrade-insecure-requests;">
+  <meta http-equiv="x-dns-prefetch-control" content="off">
+  <meta name="DownloadOptions" content="noopen">
+  <meta name="referrer" content="no-referrer">
+-->
     <!-- Custom CSS -->
     <link rel="stylesheet" href="stylesheet.css">
 
     <!-- Bootstrap, JS, Popper.js and jQuery -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
-        defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"
-        defer></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
-        defer></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+    <script src="validate.js" defer>
+    </script>
 </head>
 
 <body>
-<div class="container-fluid">
+    <div class="container-fluid">
 
-    <!-- First row: Header -->
-    <div id="header" class="row text-white">
+        <!-- First row: Header -->
+        <div id="header" class="row text-white">
 
-        <!-- Logo -->
-        <a href="index.html" class="col-3">
-            <div class="verticalCenter">
-                <img id="logo" src="logo.webp">
-            </div>
-        </a>
-
-        <!-- Search Bar -->
-        <div class="col-6">
-            <form class="input-group verticalCenter">
-                <input class="form-control" type="search" id="searchInput" placeholder="Buscar produto"
-                    mozactionhint="search" autocapitalize="words" autocomplete="on" autocorrect="on" inputmode="latin"
-                    spellcheck="true" autofocus autosave required>
-                <div class="input-group-append">
-                    <button type="submit" class="btn btn-outline-light" id="B1"><img class="img-fluid"
-                            src="search.webp"></button>
+            <!-- Logo -->
+            <a href="index.html" class="col-3">
+                <div class="verticalCenter">
+                    <img id="logo" src="logo.webp">
                 </div>
-            </form>
-        </div>
+            </a>
 
-        <!-- Sign up -->
-        <a href="login.html" class="col-2">
-            <div class="verticalCenter horizontalCenter">
-                <div class="btn btn-outline-light">
-                    <img class="img-fluid" src="user.webp"><span class="hide-sm"> Criar sua conta</span>
-                </div>
-            </div>
-        </a>
-
-        <!-- Cart -->
-        <a href="cart.html" class="col-1">
-            <div class="verticalCenter horizontalCenter">
-                <div class="btn btn-outline-light">
-                    <img class="img-fluid" src="cart.webp">
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <!-- Second row: Menu Bar -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-            <span class="navbar-toggler-icon">🍔</span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link active dropdown-toggle" href="#" data-toggle="dropdown">Categorias</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Política</a>
-                        <a class="dropdown-item" href="#">Estrangeira</a>
-                        <a class="dropdown-item" href="#">Infantojuvenil</a>
-                        <a class="dropdown-item" href="#">HQs</a>
-                        <a class="dropdown-item" href="#">Beco diagonal</a>
-                        <div class="dropdown-divider"></div>
-                        <span class="dropdown-item-text">Autores</span>
-                        <a class="dropdown-item" href="#">Gustavo Cerbasi</a>
-                        <a class="dropdown-item" href="#">John Green</a>
-                        <a class="dropdown-item" href="#">Jojo Moyes</a>
-                        <a class="dropdown-item" href="#">Pedro Lenza</a>
+            <!-- Search Bar -->
+            <div class="col-6">
+                <form class="input-group verticalCenter">
+                    <input class="form-control" type="search" id="searchInput" placeholder="Buscar produto" mozactionhint="search" autocapitalize="words" autocomplete="on" autocorrect="on" inputmode="latin" spellcheck="true" autofocus autosave required>
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-outline-light" id="B1"><img class="img-fluid"
+              src="search.webp"></button>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Mais vendidos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pré-venda</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Lançamentos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">E-books</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="row title"><div class="col-11">
-    <h3>Cadastro</h3></div><div class="col-1"></div></div>
-    <div class="row">
-        <div class="col-5">
-            <form id="cadastro">
-                <div class="form-group">
-                    <label for="Nome">Nome Completo</label>
-                    <input type="text" class="form-control" id="Nome" placeholder="Nome Completo" autofocus autosave
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="Senha">Senha</label>
-                    <input type="password" class="form-control" id="Senha" placeholder="Senha" autofocus autosave
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="RSenha"> Repita sua Senha</label>
-                    <input type="password" class="form-control" id="RSenha" placeholder="Senha" autofocus autosave
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="CPF"> CPF</label>
-                    <input type="text" class="form-control" id="CPF" placeholder="CPF" autofocus autosave required>
-                </div>
-                <div class="form-group">
-                    <label for="Email"> Email</label>
-                    <input type="email" class="form-control" id="Email" placeholder="exemplo@exemplo.com" autofocus
-                        autosave required>
-                </div>
-                <div class="form-group">
-                    <label for="Telefone"> Telefone</label>
-                    <input type="tel" class="form-control" id="Telefone" placeholder="Informe o telefone" autofocus
-                        autosave required>
-                </div>
+                </form>
+            </div>
 
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
-            </form>
+            <!-- Sign up -->
+            <a href="login.html" class="col-2">
+                <div class="verticalCenter horizontalCenter">
+                    <div class="btn btn-outline-light">
+                        <img class="img-fluid" src="user.webp"><span class="hide-sm"> Criar sua conta</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Cart -->
+            <a href="cart.html" class="col-1">
+                <div class="verticalCenter horizontalCenter">
+                    <div class="btn btn-outline-light">
+                        <img class="img-fluid" src="cart.webp">
+                    </div>
+                </div>
+            </a>
         </div>
-    </div>
+
+        <!-- Second row: Menu Bar -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon">🍔</span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" data-toggle="dropdown">Categorias</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Política</a>
+                            <a class="dropdown-item" href="#">Estrangeira</a>
+                            <a class="dropdown-item" href="#">Infantojuvenil</a>
+                            <a class="dropdown-item" href="#">HQs</a>
+                            <a class="dropdown-item" href="#">Beco diagonal</a>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-item-text">Autores</span>
+                            <a class="dropdown-item" href="#">Gustavo Cerbasi</a>
+                            <a class="dropdown-item" href="#">John Green</a>
+                            <a class="dropdown-item" href="#">Jojo Moyes</a>
+                            <a class="dropdown-item" href="#">Pedro Lenza</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mais vendidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pré-venda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Lançamentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">E-books</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Third Row: Sign Up-->
+        <div class="row title">
+            <div class="col-11">
+                <h3>Cadastro</h3>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <form id="cadastro">
+                    <div class="form-group">
+                        <label for="Nome">Nome Completo</label>
+                        <input type="text" class="form-control" id="Nome" placeholder="Nome Completo" autofocus autosave required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Senha">Senha</label>
+                        <input type="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="Senha" placeholder="Senha" autosave required>
+                    </div>
+                    <div class="form-group">
+                        <label for="RSenha"> Repita sua Senha</label>
+                        <input type="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="RSenha" onblur="Confirm_Password();" placeholder="Repita sua Senha" autosave required>
+                    </div>
+                    <div class="form-group">
+                        <label for="CPF"> CPF</label>
+                        <input type="text" class="form-control" pattern="[0-9]{11}$" id="CPF" placeholder="CPF" autosave required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email"> Email</label>
+                        <input type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="Email" placeholder="exemplo@exemplo.com" autosave required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Telefone"> Telefone</label>
+                        <input type="tel" class="form-control" id="Telefone" placeholder="Informe o telefone" onblur="mascaraDeTelefone(this)" onblur="mascaraDeTelefone(this)" autosave required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" onclick="validar();">Cadastrar</button>
+                </form>
+            </div>
+        </div>
     </div>
     <section class="footer">
-            <div class="container-fluid text-center">
-                <div class="row">
-                    <div class="col-md-3">
-                        <h1> Links Uteis</h1>
-                        <p> link </p>
-                        <p> link</p>
-                        <p> Termos de Uso</p>
-                        <p> Cupons de Desconto</p>
-                    </div>
-    
-                    <div class="col-md-3">
-                        <h1>Empresa</h1>
-                        <p> Sobre Nós </p>
-                        <p> Fale conosco</p>
-    
-                    </div>
-    
-                    <div class="col-md-3">
-                        <h1> Siga-nos</h1>
-                        <p> Facebook</p>
-                        <p> instagran</p>
-                        <p> youtube</p>
-                        <p> Cupons de Desconto</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h1> Baixe nosso APP:</h1>
-                        <img src="logo.wepb">
-                        <p> instagran</p>
-                     
-                    </div>
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-3">
+                    <h1> Links Uteis</h1>
+                    <p> link </p>
+                    <p> link</p>
+                    <p> Termos de Uso</p>
+                    <p> Cupons de Desconto</p>
+                </div>
+
+                <div class="col-md-3">
+                    <h1>Empresa</h1>
+                    <p> Sobre Nós </p>
+                    <p> Fale conosco</p>
+
+                </div>
+
+                <div class="col-md-3">
+                    <h1> Siga-nos</h1>
+                    <p> Facebook</p>
+                    <p> instagran</p>
+                    <p> youtube</p>
+                    <p> Cupons de Desconto</p>
+                </div>
+                <div class="col-md-3">
+                    <h1> Baixe nosso APP:</h1>
+                    <img src="logo.wepb">
+                    <p> instagran</p>
+
                 </div>
             </div>
-            <hr>
-                <p class="Content-Security-Policy"> Copyrigth  </p>
-        </section>
+        </div>
+        <hr>
+        <p class="Content-Security-Policy"> Copyrigth </p>
+    </section>
 
 </body>
 
