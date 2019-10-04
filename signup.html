@@ -74,6 +74,8 @@
         </div>
 
         <!-- Second row: Menu Bar -->
+
+
         <nav class="navbar navbar-expand-md navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
           <span class="navbar-toggler-icon">🍔</span>
@@ -111,7 +113,10 @@
                 </ul>
             </div>
         </nav>
+
         <!-- Third Row: Sign Up-->
+
+
         <div class="row title">
             <div class="col-11">
                 <h3>Cadastro</h3>
@@ -123,7 +128,7 @@
                 <form id="cadastro">
                     <div class="form-group">
                         <label for="Nome">Nome Completo</label>
-                        <input type="text" class="form-control" id="Nome" placeholder="Nome Completo" autofocus autosave required>
+                        <input type="text" class="form-control" id="Nome" pattern="[A-Za-z]{4,}" placeholder="Nome Completo" autofocus autosave required>
                     </div>
                     <div class="form-group">
                         <label for="Senha">Senha</label>
@@ -143,14 +148,18 @@
                     </div>
                     <div class="form-group">
                         <label for="Telefone"> Telefone</label>
-                        <input type="tel" class="form-control" id="Telefone" placeholder="Informe o telefone" onblur="mascaraDeTelefone(this)" onblur="mascaraDeTelefone(this)" autosave required>
+                        <input type="tel" class="form-control" id="Telefone" pattern="[0-9]{10}$" placeholder="Informe o telefone" autosave required>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" onclick="validar();">Cadastrar</button>
+                    <button type="submit" class="btn btn-primary" onclick="Confirm_Password();">Cadastrar</button>
                 </form>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+
+
     <section class="footer">
         <div class="container-fluid text-center">
             <div class="row">

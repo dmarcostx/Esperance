@@ -11,21 +11,3 @@ function Confirm_Password() {
         confirm_password.setCustomValidity('');
     }
 }
-
-function Confirm_Email() {
-    if (Email.value.length < 6 ||
-        Email.value.indexOf("@") <= 0 ||
-        Email.value.indexOf(".") <= 0) {
-        setCustomValidity("Informe um email valido !");
-        Email.focus();
-        return false;
-    }
-}
-
-function validar() {
-
-    Confirm_Password();
-
-    Confirm_Email();
-
-}
