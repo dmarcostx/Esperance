@@ -10,7 +10,7 @@
 }
 
 .dropdown-item-text {
-    background-color: #f0ab6b;
+    background-color: #f8f9fa;
 }
 
 .title {
@@ -24,6 +24,14 @@
 
 .col-3 .card .card-body .btn-success {
     margin: 10px;
+}
+
+.footer a {
+    color: #ffffff;
+}
+
+.footer a:hover {
+    color: #ffffff;
 }
 
 #header {
