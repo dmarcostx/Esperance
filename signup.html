@@ -10,14 +10,13 @@
     <meta name="description" content="Pagina de compras para o trabalho 1 de PW">
     <meta name="keywords" content="html, css, php, asp.net, js, jquery">
     <meta name="Author" content="Thales V C RA ? | Marcos Vinícius Lourenço Teixeira RA 2040481813002 | ?? ">
-    <!--
   <!-- Security metas
   <meta http-equiv="Content-Security-Policy"
   content="connect-src 'none'; font-src 'none'; frame-src 'none'; img-src 'none'; manifest-src 'none'; media-src 'none'; object-src 'none'; script-src https://code.jquery.com/jquery-3.3.1.slim.min.js https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js; style-src https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css; base-uri 'none'; form-action 'none'; block-all-mixed-content; upgrade-insecure-requests;">
   <meta http-equiv="x-dns-prefetch-control" content="off">
   <meta name="DownloadOptions" content="noopen">
-  <meta name="referrer" content="no-referrer">
--->
+  <meta name="referrer" content="no-referrer"> -->
+  
     <!-- Custom CSS -->
     <link rel="stylesheet" href="stylesheet.css">
 
@@ -48,8 +47,7 @@
                 <form class="input-group verticalCenter">
                     <input class="form-control" type="search" id="searchInput" placeholder="Buscar produto" mozactionhint="search" autocapitalize="words" autocomplete="on" autocorrect="on" inputmode="latin" spellcheck="true" autofocus autosave required>
                     <div class="input-group-append">
-                        <button type="submit" class="btn btn-outline-light" id="B1"><img class="img-fluid"
-              src="search.webp"></button>
+                        <button type="submit" class="btn btn-outline-light" onclick="location.href = 'search.html';"><img class="img-fluid" src="search.webp"></button>
                     </div>
                 </form>
             </div>
@@ -132,11 +130,11 @@
                     </div>
                     <div class="form-group">
                         <label for="Senha">Senha</label>
-                        <input type="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="Senha" placeholder="Senha" autosave required>
+                        <input type="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,128}" id="Senha" placeholder="Senha" autosave required>
                     </div>
                     <div class="form-group">
                         <label for="RSenha"> Repita sua Senha</label>
-                        <input type="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="RSenha" onblur="Confirm_Password();" placeholder="Repita sua Senha" autosave required>
+                        <input type="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,128}" id="RSenha" onblur="Confirm_Password();" placeholder="Repita sua Senha" autosave required>
                     </div>
                     <div class="form-group">
                         <label for="CPF"> CPF</label>
@@ -148,7 +146,7 @@
                     </div>
                     <div class="form-group">
                         <label for="Telefone"> Telefone</label>
-                        <input type="tel" class="form-control" id="Telefone" pattern="[0-9]{10}$" placeholder="Informe o telefone" autosave required>
+                        <input type="tel" class="form-control" id="Telefone" pattern="[0-9]{8,9}$" placeholder="Informe o telefone" autosave required>
                     </div>
 
                     <button type="submit" class="btn btn-primary" onclick="Confirm_Password();">Cadastrar</button>
