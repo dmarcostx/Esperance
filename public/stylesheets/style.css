@@ -10,3 +10,170 @@ a {
 .invertFilter {
   filter: invert(100%);
 }
+
+.horizontalCenter {
+  text-align: center;
+}
+
+.verticalCenter {
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  width: inherit;
+}
+
+.dropdown-item-text {
+  background-color: #f8f9fa;
+}
+
+.title {
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.col-3 .card .card-body .buy {
+  background-color: green;
+}
+
+.col-3 .card .card-body .btn-success {
+  margin: 10px;
+}
+
+.footer a {
+  color: #ffffff;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+#header {
+  background-color: #f37903;
+  height: 150px;
+}
+
+#header .btn:hover .img-fluid {
+  filter: invert(90%);
+}
+
+#header #logo {
+  width: inherit;
+  padding: 20px;
+}
+
+#searchInput {
+  background-color: inherit;
+}
+
+#searchInput {
+  color: #ffffff;
+}
+
+#searchInput::placeholder {
+  color: #ffffff;
+}
+
+#resetPasswordField {
+  padding-bottom: 40px;
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .hide-sm {
+      display: none;
+  }
+}
+
+.single-product {
+  margin-top: 70px;
+}
+
+.new-arrival {
+  background: green;
+  width: 50px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.col-md-7 h2 {
+  color: #555;
+}
+
+.single-product .price {
+  color: orange;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.single-product input {
+  border: 1px solid #ccc;
+  font-weight: bold;
+  height: 33px;
+  text-align: center;
+  width: 30px;
+}
+
+.single-product .btn-primary {
+  background: orange;
+  color: #fff;
+  font-size: 15px;
+  margin-left: 20px;
+  border: none;
+  box-shadow: none;
+}
+
+.product-description h6 {
+  margin-top: 50px;
+  color: orange;
+}
+
+.product-description {
+  margin-top: 30px;
+}
+
+.product-description hr {
+  margin-bottom: 50px;
+}
+
+.login {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+#cadastro {
+  margin-left: 50px;
+}
+
+.footer {
+  margin-top: 100px;
+  background-color: #000;
+  color: #fff;
+}
+
+.footer h1 {
+  font-size: 15px;
+  margin: 25px 0;
+}
+
+.footer p {
+  font-size: 12px;
+}
+
+.Content-Security-Policy {
+  padding: 10px;
+  font-size: 15px;
+}
+
+.footer-image img {
+  width: 15px;
+}
+
+.row-cart {
+  padding-bottom: 30px;
+}
+
+.cart p {
+  padding-right: 30px;
+}
