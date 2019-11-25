@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  section(class="cart")
+    div(class="row-cart")
+      div(class="col-4")
+        h2='Cesta de compras'
+      div(class="col-8")
+    div(class="row")
+      div(class="col-1")
+      div(class="col-7 horizontalCenter")
+        table(class="table" id="cart")
+          thead
+            tr
+              th(scope="col")='Item'
+              th(scope="col")='Produto'
+              th(scope="col")='Quantidade'
+              th(scope="col")='Preço'
+          tbody
+            tr
+              th(scope="row")='1'
+              td='A Pedra Filosofal'
+              td='2'
+              td='R$ 20,00'
+            tr
+              th(scope="row")='2'
+              td='Camara Secreta'
+              td='1'
+              td='R$ 15,00'
+            tr
+              th(scope="row")='3'
+              td='Prisioneiro de Azkaban'
+              td='1'
+              td='R$ 15,00'
+      div(class="col-1")
+      div(class="col-3")
+        h3='Resumo do Pedido'
+        p='Subtotal: R$ 70'
+        p='Frete: R$ 12,90'
+        p='Valor total: R$ 82,90'
+        button(type="button" class="btn btn-success" id="Comprar")='Continuar'
