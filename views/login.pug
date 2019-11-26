@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  section(class="login")
+    div(class="container-fluid")
+      div(class="row justify-content-center align-items-center align-center")
+        div(class="col-6  " align="center")
+          h2='Login'
+          form
+            p
+              span='Email '
+              input(type="email" placeholder=" seuemail@exemplo.com" required)
+            p
+              span='Senha '
+              input(type="password" placeholder="Sua senha" required)
+            button(type="submit" class="btn btn-info")='Entrar'
+            a(href="resetPassword.html" class="btn btn-info")=' Esqueci a Senha'
+        div(class="col-6 " align="center")
+          h2='Cadastro'
+          p='Ainda não possuí cadastro?'
+          a(href="signup.html" class="btn btn-info" id="Cadastrar")='Cadastrar'
