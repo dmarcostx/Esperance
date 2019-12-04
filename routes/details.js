@@ -1,9 +1,12 @@
-var express = require('express');
-var router = express.Router();
+var express = require('express')
+var router = express.Router()
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('details');
-});
+router.get('/', (req, res, next) => {
+  res.render('details')
+})
 
-module.exports = router;
+router.post('/', (req, res, next) => {
+  // add item to cart
+})
+
+module.exports = router
