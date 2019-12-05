@@ -7,17 +7,18 @@ block content
         h3=categoria.nm_categoria
       div(class='col-11')
       each produto in produtos
-        div(class='col-3')
-          div(class='card')
-            a(href='/details')
-              img(class='card-img-top' src='images/'+produto.cd_produto+'.webp')
-            div(class='card-body')
+        if categoria.cd_categoria == produto.cd_categoria
+          div(class='col-3')
+            div(class='card')
+              a(href='/details')
+                img(class='card-img-top' src='images/'+produto.cd_produto+'.webp')
               div(class='card-body')
-                h5(class='card-title')=produto.nm_produto
-                p(class='card-text')=produto.ds_produto
-              ul(class='list-group list-group-flush')
-                li(class='list-group-item')='R$'+produto.vl_produto
-              div(class='horizontalCenter')
-                button(class='btn btn-success')
-                  img(class='img-fluid' src='images/cart.webp')
-                  span=' Comprar'
+                div(class='card-body')
+                  h5(class='card-title')=produto.nm_produto
+                  p(class='card-text')=produto.ds_produto
+                ul(class='list-group list-group-flush')
+                  li(class='list-group-item')='R$'+produto.vl_produto
+                div(class='horizontalCenter')
+                  button(class='btn btn-success')
+                    img(class='img-fluid' src='images/cart.webp')
+                    span=' Comprar'
