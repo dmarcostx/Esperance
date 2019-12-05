@@ -24,7 +24,7 @@ CREATE TABLE produto (
     cd_produto INT UNSIGNED NOT NULL AUTO_INCREMENT,
     cd_categoria TINYINT UNSIGNED NOT NULL,
     nm_produto VARCHAR(20) NOT NULL,
-    ds_produto VARCHAR(30) NOT NULL,
+    ds_produto VARCHAR(100) NOT NULL,
     vl_produto DOUBLE NOT NULL,
     PRIMARY KEY (cd_produto),
     FOREIGN KEY (cd_categoria) REFERENCES categoria (cd_categoria)
