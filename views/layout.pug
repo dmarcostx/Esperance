@@ -30,7 +30,10 @@ html
           div(class='verticalCenter horizontalCenter')
             div(class='btn btn-outline-light')
               img(class='img-fluid' src='images/user.webp')
-              span(class='hide-sm')= ' Criar sua conta'
+              if(nome == null)
+                span(class='hide-sm')= ' Criar sua conta'
+              else
+                span(class='hide-sm')= ' '+nome
         a(href='/cart' class='col-1')
           div(class='verticalCenter horizontalCenter')
             div(class='btn btn-outline-light')

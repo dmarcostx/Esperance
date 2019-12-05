@@ -7,7 +7,7 @@ const pool = require('mariadb').createPool({
 })
 
 router.get('/', (req, res, next) => {
-  res.render('login')
+  res.render('login', {nome: req.session.nome})
 })
 
 router.post('/', (req, res, next) => {

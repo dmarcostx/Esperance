@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
     .then(conn => {
       conn.query('SELECT * FROM produto WHERE cd_produto=' + req.query.id)
         .then((produto) => {
-          res.render('details', { produto: produto[0] })
+          res.render('details', { nome: req.session.nome, produto: produto[0] })
         })
         .catch(err => {
         // handle error

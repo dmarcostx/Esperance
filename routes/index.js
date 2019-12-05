@@ -14,7 +14,7 @@ router.get('/', (req, res, next) => {
         .then((categorias) => {
           conn.query('SELECT * FROM produto')
             .then((produtos) => {
-              res.render('index', { categorias: categorias, produtos: produtos })
+              res.render('index', { nome: req.session.nome, categorias: categorias, produtos: produtos })
             })
         })
         .catch(err => {

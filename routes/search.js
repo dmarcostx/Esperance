@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
     .then(conn => {
       conn.query("SELECT * FROM produto WHERE nm_produto LIKE '%" + req.query.busca + "%'")
         .then((produtos) => {
-          res.render('search', { produtos: produtos })
+          res.render('search', { nome: req.session.nome, produtos: produtos })
         })
         .catch(err => {
         // handle error
