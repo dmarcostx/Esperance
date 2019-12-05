@@ -6,14 +6,14 @@ block content
       div(class="row justify-content-center align-items-center align-center")
         div(class="col-6  " align="center")
           h2='Login'
-          form
+          form(method="post")
             p
               span='Email '
-              input(type="email" placeholder=" seuemail@exemplo.com" required)
+              input(name="email" type="email" placeholder=" seuemail@exemplo.com" required)
             p
               span='Senha '
-              input(type="password" placeholder="Sua senha" required)
-            button(type="submit" class="btn btn-primary")='Entrar'
+              input(name="senha" type="password" placeholder="Sua senha" required)
+            button(class="btn btn-primary")='Entrar'
             span=' '
             a(href="resetPassword" class="btn btn-secondary")=' Esqueci a Senha'
         div(class="col-6 " align="center")
