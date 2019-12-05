@@ -22,7 +22,6 @@ router.get('/', function (req, res, next) {
       console.log('not connected')
       console.log(err)
     })
-  res.render('search')
 })
 
 module.exports = router

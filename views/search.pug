@@ -18,10 +18,10 @@ block content
                   h5(class="card-title")=produto.nm_produto
                   p(class="card-text")=produto.ds_produto
                 ul(class="list-group list-group-flush")
-                  li(class="list-group-item")='R$'+produto.vl_produto
+                  li(class="list-group-item")='R$ '+produto.vl_produto
                 div(class="horizontalCenter")
                   button(class="btn btn-success")
                     img(class="img-fluid" src="images/cart.webp")
                     span=' Comprar'
         else
-          span(class=verticalCenter)='Nenhum produto encontrado'
+          span(class="horizontalCenter")='Nenhum produto encontrado'

@@ -24,7 +24,6 @@ CREATE TABLE produto (
     nm_produto VARCHAR(20) NOT NULL,
     ds_produto VARCHAR(30) NOT NULL,
     vl_produto DOUBLE NOT NULL,
-    vl_quantidade INT UNSIGNED NOT NULL,
     PRIMARY KEY (cd_produto),
     FOREIGN KEY (cd_categoria) REFERENCES categoria (cd_categoria)
 );
