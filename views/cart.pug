@@ -12,30 +12,22 @@ block content
         table(class="table" id="cart")
           thead
             tr
-              th(scope="col")='Item'
               th(scope="col")='Produto'
               th(scope="col")='Quantidade'
               th(scope="col")='Preço'
           tbody
-            tr
-              th(scope="row")='1'
-              td='A Pedra Filosofal'
-              td='2'
-              td='R$ 20,00'
-            tr
-              th(scope="row")='2'
-              td='Camara Secreta'
-              td='1'
-              td='R$ 15,00'
-            tr
-              th(scope="row")='3'
-              td='Prisioneiro de Azkaban'
-              td='1'
-              td='R$ 15,00'
+            -let valor=0
+            each produto in carrinho
+              tr
+                td=produto.nome
+                td=produto.qtd
+                -valor=valor+produto.valor
+                td=produto.valor
       div(class="col-1")
       div(class="col-3")
         h3='Resumo do Pedido'
-        p='Subtotal: R$ 70'
+        p='Subtotal: R$ '+valor
+        -valor=valor+12.9
         p='Frete: R$ 12,90'
-        p='Valor total: R$ 82,90'
+        p='Valor total: R$ '+valor
         button(type="button" class="btn btn-success" id="Comprar")='Continuar'

@@ -15,7 +15,12 @@ router.post('/', (req, res, next) => {
     .then(conn => {
       conn.query("SELECT * FROM cliente WHERE ds_email='" + req.body.email + "' AND senha='" + req.body.senha + "'")
         .then((cliente) => {
-          res.send(cliente)
+          req.session.nome = cliente[0].nm_cliente
+          req.session.cpf = cliente[0].nr_cpf
+          req.session.email = cliente[0].ds_email
+          req.session.tel = cliente[0].nr_telefone
+          req.session.endereco = cliente[0].ds_endereco
+          res.redirect('/')
         })
         .catch(err => {
         // handle error
