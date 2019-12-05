@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
 router.post('/', (req, res, next) => {
   pool.getConnection()
     .then(conn => {
-      conn.query("SELECT * FROM cliente WHERE ds_email='"+req.body.email+"' AND senha='"+req.body.senha+"'")
+      conn.query("SELECT * FROM cliente WHERE ds_email='" + req.body.email + "' AND senha='" + req.body.senha + "'")
         .then((cliente) => {
           res.send(cliente)
         })
