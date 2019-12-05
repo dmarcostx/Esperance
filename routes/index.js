@@ -7,6 +7,7 @@ const pool = require('mariadb').createPool({
 })
 
 router.get('/', (req, res, next) => {
+  console.log(req.session)
   pool.getConnection()
     .then(conn => {
       conn.query('SELECT * FROM categoria')

@@ -9,9 +9,9 @@ const pool = require('mariadb').createPool({
 router.get('/', (req, res, next) => {
   pool.getConnection()
     .then(conn => {
-      conn.query('SELECT * FROM produto WHERE cd_produto='+req.query.id)
+      conn.query('SELECT * FROM produto WHERE cd_produto=' + req.query.id)
         .then((produto) => {
-          res.render('details', {produto:produto[0]})
+          res.render('details', { produto: produto[0] })
         })
         .catch(err => {
         // handle error

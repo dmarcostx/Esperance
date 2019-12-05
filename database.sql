@@ -11,7 +11,8 @@ CREATE TABLE cliente (
     nr_telefone BIGINT UNSIGNED NOT NULL,
     ds_endereco VARCHAR(100) NOT NULL,
     PRIMARY KEY (cd_cliente),
-    UNIQUE (nr_cpf)
+    UNIQUE (nr_cpf),
+    UNIQUE (ds_email)
 );
 
 CREATE TABLE categoria (
