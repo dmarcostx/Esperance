@@ -6,10 +6,12 @@ CREATE TABLE cliente (
     cd_cliente INT UNSIGNED NOT NULL AUTO_INCREMENT,
     nm_cliente VARCHAR(60) NOT NULL,
     senha VARCHAR(16) NOT NULL,
-    dt_nascimento DATE NOT NULL,
-    ds_endereco VARCHAR(100) NOT NULL,
+    nr_cpf BIGINT UNSIGNED NOT NULL,
     ds_email VARCHAR(45) NOT NULL,
-    PRIMARY KEY (cd_cliente)
+    nr_telefone BIGINT UNSIGNED NOT NULL,
+    ds_endereco VARCHAR(100) NOT NULL,
+    PRIMARY KEY (cd_cliente),
+    UNIQUE (nr_cpf)
 );
 
 CREATE TABLE categoria (

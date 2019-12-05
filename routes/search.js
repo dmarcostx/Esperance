@@ -6,7 +6,7 @@ const pool = require('mariadb').createPool({
   database: 'pweb'
 })
 
-router.get('/', function (req, res, next) {
+router.get('/', (req, res, next) => {
   pool.getConnection()
     .then(conn => {
       conn.query("SELECT * FROM produto WHERE nm_produto LIKE '%" + req.query.busca + "%'")

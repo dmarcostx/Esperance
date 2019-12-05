@@ -7,23 +7,26 @@ block content
     div(class="col-1")
   div(class="row")
     div(class="col-5")
-      form(id="cadastro")
+      form(id="cadastro" method="post")
         div(class="form-group")
           label(for="Nome")='Nome Completo'
-          input(type="text" class="form-control" id="Nome" pattern="[A-Za-z]{4,}" placeholder="Nome Completo" autofocus autosave required)
+          input(name="nome" type="text" class="form-control" id="Nome" pattern="[A-Za-z]{4,}" placeholder="Nome Completo" autofocus autosave required)
         div(class="form-group")
           label(for="Senha")='Senha'
-          input(type="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,128}" id="Senha" placeholder="Senha" autosave required)
+          input(name="senha" type="password" class="form-control" pattern="(?=.*[a-z])(?=.*[A-Z]).{6,128}" id="Senha" placeholder="Senha" autosave required)
         div(class="form-group")
           label(for="RSenha")='Repita sua Senha'
-          input(type="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,128}" id="RSenha" placeholder="Repita sua Senha" autosave required)
+          input(name="rsenha" type="password" class="form-control" pattern="(?=.*[a-z])(?=.*[A-Z]).{6,128}" id="RSenha" placeholder="Repita sua Senha" autosave required)
         div(class="form-group")
           label(for="CPF")='CPF'
-          input(type="text" class="form-control" pattern="[0-9]{11}$" id="CPF" placeholder="CPF" autosave required)
+          input(name="cpf" type="text" class="form-control" pattern="[0-9]{11}$" id="CPF" placeholder="CPF" autosave required)
         div(class="form-group")
           label(for="Email")='Email'
-          input(type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="Email" placeholder="exemplo@exemplo.com" autosave required)
+          input(name="email" type="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="Email" placeholder="exemplo@exemplo.com" autosave required)
         div(class="form-group")
           label(for="Telefone")='Telefone'
-          input(type="tel" class="form-control" id="Telefone" pattern="[0-9]{8,9}$" placeholder="Informe o telefone" autosave required)
+          input(name="tel" type="tel" class="form-control" id="Telefone" pattern="[0-9]{8,11}$" placeholder="Informe o telefone" autosave required)
+        div(class="form-group")
+          label(for="Endereco")='Endereço'
+          input(name="endereco" type="text" class="form-control" id="Endereco" placeholder="Informe o endereço" autosave required)
         button(type="submit" class="btn btn-primary")='Cadastrar'
