@@ -1,5 +1,5 @@
-var express = require('express')
-var router = express.Router()
+const express = require('express')
+const router = express.Router()
 const pool = require('mariadb').createPool({
   host: 'localhost',
   user: 'pweb',
@@ -16,6 +16,7 @@ router.post('/', (req, res, next) => {
       conn.query("SELECT * FROM cliente WHERE ds_email='" + req.body.email + "' AND senha='" + req.body.senha + "'")
         .then((cliente) => {
           req.session.nome = cliente[0].nm_cliente
+          req.session.senha = cliente[0].senha
           req.session.cpf = cliente[0].nr_cpf
           req.session.email = cliente[0].ds_email
           req.session.tel = cliente[0].nr_telefone

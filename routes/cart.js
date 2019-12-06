@@ -16,7 +16,7 @@ router.get('/', (req, res, next) => {
           .then((produto) => {
             let found = false
             for (let index = 0; index < req.session.carrinho.length; index++) {
-              if (req.session.carrinho[index].codigo == req.query.id) {
+              if (req.session.carrinho[index].codigo === req.query.id) {
                 found = true
                 req.session.carrinho[index].qtd++
                 break
