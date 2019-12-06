@@ -4,30 +4,35 @@ block content
   section(class="cart")
     div(class="row-cart")
       div(class="col-4")
-        h2='Cesta de compras'
+        h2='Carrinho de compras'
       div(class="col-8")
     div(class="row")
-      div(class="col-1")
-      div(class="col-7 horizontalCenter")
-        table(class="table" id="cart")
-          thead
-            tr
-              th(scope="col")='Produto'
-              th(scope="col")='Quantidade'
-              th(scope="col")='Preço'
-          tbody
-            -let valor=0
-            each produto in carrinho
+      if(carrinho == null || carrinho.length == 0)
+        h1='Carrinho vazio'
+      else
+        div(class="col-1")
+        div(class="col-7 horizontalCenter")
+          table(class="table" id="cart")
+            thead
               tr
-                td=produto.nome
-                td=produto.qtd
-                -valor=valor+produto.valor
-                td=produto.valor
-      div(class="col-1")
-      div(class="col-3")
-        h3='Resumo do Pedido'
-        p='Subtotal: R$ '+valor
-        -valor=valor+12.9
-        p='Frete: R$ 12,90'
-        p='Valor total: R$ '+valor
-        button(type="button" class="btn btn-success" id="Comprar")='Continuar'
+                th(scope="col")='Produto'
+                th(scope="col")='Quantidade'
+                th(scope="col")='Preço'
+            tbody
+              -let valor=0
+              each produto in carrinho
+                tr
+                  td=produto.nome
+                  td=produto.qtd
+                  td=produto.valor
+                  -valor=valor+produto.valor*produto.qtd
+        div(class="col-1")
+        div(class="col-3")
+          h3='Resumo do Pedido'
+          p='Subtotal: R$ '+valor
+          -valor=valor+12.9
+          p='Frete: R$ 12,90'
+          p='Valor total: R$ '+valor
+          a(class="btn btn-secondary" href="/empty")='Limpar carrinho'
+          span=' '
+          a(class="btn btn-success" href="/buy")='Finalizar compra'

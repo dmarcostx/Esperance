@@ -1,5 +1,9 @@
-a {
-  color: #00B7FF;
+.blackText {
+  color: black;
+}
+
+.blackText:hover {
+  color: black;
 }
 
 .invertFilter {

@@ -46,25 +46,14 @@ html
             li(class='nav-item active dropdown')
               a(id='navbarDropdown' class='nav-link dropdown-toggle' href='#' data-toggle='dropdown')='Categorias'
               div(class='dropdown-menu' aria-labelledby='navbarDropdown')
-                a(class='dropdown-item' href='#')='Política'
-                a(class='dropdown-item' href='#')='Estrangeira'
-                a(class='dropdown-item' href='#')='Infantojuvenil'
-                a(class='dropdown-item' href='#')='HQs'
-                a(class='dropdown-item' href='#')='Beco diagonal'
-                div(class='dropdown-divider')
-                span(class='dropdown-item-text')='Autores'
-                a(class='dropdown-item' href='#')='Gustavo Cerbasi'
-                a(class='dropdown-item' href='#')='John Green'
-                a(class='dropdown-item' href='#')='Jojo Moyes'
-                a(class='dropdown-item' href='#')='Pedro Lenza'
+                a(class='dropdown-item' href='/category?id=1')='Infantil'
+                a(class='dropdown-item' href='/category?id=2')='Romance'
+                a(class='dropdown-item' href='/category?id=3')='Ficção'
+                a(class='dropdown-item' href='/category?id=4')='Esotérico'
             li(class='nav-item')
-              a(class='nav-link' href='#')='Mais vendidos'
+              a(class='nav-link' href='/login')='Minha conta'
             li(class='nav-item')
-              a(class='nav-link' href='#')='Pré-venda'
-            li(class='nav-item')
-              a(class='nav-link' href='#')='Lançamentos'
-            li(class='nav-item')
-              a(class='nav-link' href='#')='E-books'
+              a(class='nav-link' href='/cart')='Meu carrinho'
       block content
     section(class='footer')
       div(class='container-fluid text-center')

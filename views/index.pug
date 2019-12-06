@@ -2,25 +2,26 @@ extends layout
 
 block content
   each categoria in categorias
-    div(class='row title')
-      div(class='col-1')
-        h3=categoria.nm_categoria
-      div(class='col-11')
-      -let index=0
-      each produto in produtos
-        -index=index+1
-        if categoria.cd_categoria == produto.cd_categoria && index <= 4
-          div(class='col-3')
-            div(class='card')
-              a(href='/details?id='+produto.cd_produto)
-                img(class='card-img-top' src='images/'+produto.cd_produto+'.webp')
-              div(class='card-body')
+    p
+      div(class='row title')
+        div(class='col-1')
+          a(href="/category?id="+categoria.cd_categoria class="blackText")
+            h3=categoria.nm_categoria
+        div(class='col-11')
+        each produto in produtos
+          if categoria.cd_categoria == produto.cd_categoria
+            div(class='col-3')
+              div(class='card')
+                a(href='/details?id='+produto.cd_produto)
+                  img(class='card-img-top' src='images/'+produto.cd_produto+'.jpg')
                 div(class='card-body')
-                  h5(class='card-title')=produto.nm_produto
-                  p(class='card-text')=produto.ds_produto
-                ul(class='list-group list-group-flush')
-                  li(class='list-group-item')='R$ '+produto.vl_produto
-                div(class='horizontalCenter')
-                  a(class='btn btn-success' href='/cart?id='+produto.cd_produto)
-                    img(class='img-fluid' src='images/cart.webp')
-                    span=' Comprar'
+                  div(class='card-body')
+                    h5(class='card-title')=produto.nm_produto
+                    p(class='card-text')=produto.ds_produto
+                  ul(class='list-group list-group-flush')
+                    li(class='list-group-item')=produto.nm_autor
+                    li(class='list-group-item')='R$ '+produto.vl_produto
+                  div(class='horizontalCenter')
+                    a(class='btn btn-success' href='/cart?id='+produto.cd_produto)
+                      img(class='img-fluid' src='images/cart.webp')
+                      span=' Comprar'

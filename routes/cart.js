@@ -7,7 +7,7 @@ const pool = require('mariadb').createPool({
 })
 
 router.get('/', (req, res, next) => {
-  if (req.query.id == null) res.render('cart', { nome: req.session.nome })
+  if (req.query.id == null) res.render('cart', { nome: req.session.nome, carrinho: req.session.carrinho })
   else {
     if (req.session.carrinho == null) req.session.carrinho = []
     pool.getConnection()

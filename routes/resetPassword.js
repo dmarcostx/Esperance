@@ -9,14 +9,17 @@ const pool = require('mariadb').createPool({
 
 async function mail (req) {
   const transporter = nodemailer.createTransport({
-    XXX
+    service: 'gmail',
+    auth: {
+      XXX
+    }
   })
   pool.getConnection()
     .then(conn => {
       conn.query("SELECT senha FROM cliente WHERE ds_email='" + req.body.email + "'")
         .then((senha) => {
           transporter.sendMail({
-            from: 'XXX',
+            XXX,
             to: req.body.email,
             subject: 'Sua senha na loja Esperance',
             text: 'Sua senha é ' + senha[0].senha,
