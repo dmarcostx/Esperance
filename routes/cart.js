@@ -7,28 +7,32 @@ const pool = require('mariadb').createPool({
 })
 
 router.get('/', (req, res, next) => {
-  if(req.query.id == null)
-    res.render('cart', {nome: req.session.nome})
+  if (req.query.id == null) res.render('cart', { nome: req.session.nome })
   else {
-    if(req.session.carrinho == null) {
-      req.session.carrinho = []
-    }
-  pool.getConnection()
-  .then(conn => {
-    conn.query('SELECT nm_produto, vl_produto FROM produto WHERE cd_produto=' + req.query.id)
-      .then((produto) => {
-        req.session.carrinho.push({ nome: produto[0].nm_produto, qtd: 1, valor: produto[0].vl_produto });
-        res.render('cart', { nome: req.session.nome, carrinho: req.session.carrinho })
-      })
-      .catch(err => {
-      // handle error
+    if (req.session.carrinho == null) req.session.carrinho = []
+    pool.getConnection()
+      .then(conn => {
+        conn.query('SELECT nm_produto, vl_produto FROM produto WHERE cd_produto=' + req.query.id)
+          .then((produto) => {
+            let found = false
+            for (let index = 0; index < req.session.carrinho.length; index++) {
+              if (req.session.carrinho[index].codigo == req.query.id) {
+                found = true
+                req.session.carrinho[index].qtd++
+                break
+              }
+            }
+            if (!found) req.session.carrinho.push({ codigo: req.query.id, nome: produto[0].nm_produto, qtd: 1, valor: produto[0].vl_produto })
+            res.render('cart', { nome: req.session.nome, carrinho: req.session.carrinho })
+          })
+          .catch(err => {
+            console.log(err)
+            conn.end()
+          })
+      }).catch(err => {
+        console.log('not connected')
         console.log(err)
-        conn.end()
       })
-  }).catch(err => {
-    console.log('not connected')
-    console.log(err)
-  })
   }
 })
 

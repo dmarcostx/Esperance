@@ -26,7 +26,7 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(session({
   cookie: {
-    maxAge: 60*60000,
+    maxAge: 60 * 60000,
     sameSite: true,
     secure: false
   },
