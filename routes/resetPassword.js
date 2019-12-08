@@ -11,7 +11,8 @@ async function mail (req) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      XXX
+      user: '@gmail.com',
+      pass: ''
     }
   })
   pool.getConnection()
@@ -19,7 +20,7 @@ async function mail (req) {
       conn.query("SELECT senha FROM cliente WHERE ds_email='" + req.body.email + "'")
         .then((senha) => {
           transporter.sendMail({
-            XXX,
+            from: '"" <@gmail.com>',
             to: req.body.email,
             subject: 'Sua senha na loja Esperance',
             text: 'Sua senha é ' + senha[0].senha,

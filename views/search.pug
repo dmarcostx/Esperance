@@ -11,8 +11,8 @@ block content
         each produto in produtos
           div(class="col-3 organize")
             div(class="card")
-              a(href="/details")
-                img(class="card-img-top" src="images/"+produto.cd_produto+".webp")
+              a(href="/details?id="+produto.cd_produto)
+                img(class="card-img-top" src="images/"+produto.cd_produto+".jpg")
               div(class="card-body")
                 div(class="card-body")
                   h5(class="card-title")=produto.nm_produto

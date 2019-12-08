@@ -8,7 +8,9 @@ block content
       div(class="col-8")
     div(class="row")
       if(carrinho == null || carrinho.length == 0)
-        h1='Carrinho vazio'
+        div(class="col-4")
+        div(class="col-3")
+          h1='Carrinho vazio'
       else
         div(class="col-1")
         div(class="col-7 horizontalCenter")

@@ -4,19 +4,22 @@ block content
   section(class="login")
     div(class="container-fluid")
       div(class="row justify-content-center align-items-center align-center")
-        div(class="col-6  " align="center")
-          h2='Login'
-          form(method="post")
-            p
-              span='Email '
-              input(name="email" type="email" placeholder=" seuemail@exemplo.com" required)
-            p
-              span='Senha '
-              input(name="senha" type="password" placeholder="Sua senha" required)
-            button(class="btn btn-primary")='Entrar'
-            span=' '
-            a(href="resetPassword" class="btn btn-secondary")=' Esqueci a Senha'
-        div(class="col-6 " align="center")
+        div(class="col-md-6  " align="center")
+          if nome == null
+            h2='Login'
+            form(method="post")
+              p
+                span='Email '
+                input(name="email" type="email" placeholder=" seuemail@exemplo.com" required)
+              p
+                span='Senha '
+                input(name="senha" type="password" placeholder="Sua senha" required)
+              button(class="btn btn-primary")='Entrar'
+              span=' '
+              a(href="resetPassword" class="btn btn-secondary")=' Esqueci a Senha'
+          else
+            h2=nome
+        div(class="col-md-6 " align="center")
           h2='Cadastro'
           p='Ainda não possuí cadastro?'
           a(href="signup" class="btn btn-primary" id="Cadastrar")='Cadastrar'

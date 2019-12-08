@@ -10,7 +10,7 @@ block content
         div(class='col-11')
         each produto in produtos
           if categoria.cd_categoria == produto.cd_categoria
-            div(class='col-3')
+            div(class='col-md-3')
               div(class='card')
                 a(href='/details?id='+produto.cd_produto)
                   img(class='card-img-top' src='images/'+produto.cd_produto+'.jpg')

@@ -10,7 +10,7 @@ block content
       form(id="cadastro" method="post")
         div(class="form-group")
           label(for="Nome")='Nome Completo'
-          input(name="nome" type="text" class="form-control" id="Nome" pattern="[A-Za-z]{4,}" placeholder="Nome Completo" autofocus autosave required)
+          input(name="nome" type="text" class="form-control" id="Nome" pattern="[A-Za-z ]{4,}" placeholder="Nome Completo" autofocus autosave required)
         div(class="form-group")
           label(for="Senha")='Senha'
           input(name="senha" type="password" class="form-control" pattern="(?=.*[a-z])(?=.*[A-Z]).{6,128}" id="Senha" placeholder="Senha" autosave required)
